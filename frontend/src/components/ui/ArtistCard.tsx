@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "./card";
 import { usePlayerStore } from "@/store/playerStore";
-import { Link } from "react-router-dom"; // Import Link
+import { Link } from "react-router-dom";
 
 type Props = {
   artist: {
@@ -17,12 +17,12 @@ type Props = {
     image: string;
     topTracks: {
       album: {
-        id: string; // Add album ID here
+        id: string;
         image: string;
         name: string;
         release_date: string;
       };
-      artists: { name: string }[]; // Ensure this is an array of artists
+      artists: { name: string }[];
       duration_ms: number;
       name: string;
       uri: string;
@@ -83,7 +83,6 @@ const ArtistCard: FC<Props> = ({ artist, handlePlayTrack }) => {
                     Artist: {track.artists.name}
                   </CardDescription>
                   <CardDescription className="text-xs text-gray-700">
-                    {/* Make only the album title clickable */}
                     <Link
                       to={`/album/${track.album.id}`}
                       className="text-blue-500 hover:text-blue-700"
