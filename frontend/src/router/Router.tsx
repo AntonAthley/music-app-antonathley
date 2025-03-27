@@ -5,8 +5,7 @@ import Home from "../pages/Home";
 import SignIn from "../pages/SignIn";
 import NotFound from "../pages/NotFound";
 import ArtistId from "@/pages/ArtistId";
-import Player from "@/pages/Player";
-import Reset from "@/pages/Reset";
+import AlbumId from "@/pages/AlbumId";
 
 const router = createBrowserRouter([
   {
@@ -17,10 +16,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      {
-        path: "/Player",
-        element: <Player />,
-      },
+
       {
         path: "/SignIn",
         element: <SignIn />,
@@ -30,8 +26,8 @@ const router = createBrowserRouter([
         element: <ArtistId />,
       },
       {
-        path: "/reset",
-        element: <Reset />,
+        path: "/album/:id",
+        element: <AlbumId />,
       },
       {
         path: "*",

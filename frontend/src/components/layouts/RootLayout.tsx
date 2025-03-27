@@ -11,10 +11,10 @@ export default function RootLayout() {
       {accessToken && <Header />}
       <main className="flex-1">
         <Outlet />
+        <div className="sticky bottom-0 w-full">
+          {accessToken && <PlayerComponent />}
+        </div>
       </main>
-      <div className="sticky bottom-0 w-full">
-        <PlayerComponent />
-      </div>
     </div>
   );
 }

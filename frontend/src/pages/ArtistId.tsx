@@ -83,6 +83,7 @@ const ArtistId = () => {
         image: artistInfo.images[0].url,
         topTracks: topTracks.map((track) => ({
           album: {
+            id: track.album.id,
             image: track.album.images[0].url,
             name: track.album.name,
             release_date: track.album.release_date,

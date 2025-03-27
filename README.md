@@ -13,7 +13,8 @@ För att utveckla vidare på dessa komponenter:
 
 - Delade upp PlayerComponent i mindre delar och la till volym och slider.
 - Ändrade layout och responsivitet på Player + la i rootlayout.
-- Ökad responsivitet på huvudsidan
+- Ökad responsivitet på huvudsidan.
+- La till albumsida, samt länkar från artistsidan till den.
 
 ## Huvudkomponenter från grupparbetet
 
