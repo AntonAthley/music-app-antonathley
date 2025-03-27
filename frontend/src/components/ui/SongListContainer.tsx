@@ -45,7 +45,7 @@ export default function SongListContainer() {
   }, [accessToken]); // useEffect only runs when accessToken changes
 
   return (
-    <div className="rounded-md border-4 border-black bg-colors-customGreen m-4 p-4 sm:w-full md:w-1/2 lg:w-1/3 h-[70vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] overflow-y-auto">
+    <div className="rounded-md border-4 border-black bg-colors-customGreen m-3 p-4 sm:w-[calc(100%-17px)] md:w-1/2 lg:w-1/3 h-[70vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] overflow-y-auto">
       <h2 className="text-4xl font-bold mb-4 bg-colors-customGreen">
         Top Tracks
       </h2>

@@ -13,11 +13,25 @@ const ArtistId = () => {
   const artistUri = path.startsWith("/artist/") ? path.substring(8) : null;
   const accessToken = useAccessStore().accessToken;
   const setTrack = usePlayerStore((state) => state.setTrack);
+  const togglePlay = usePlayerStore((state) => state.togglePlay);
+  const deviceId = usePlayerStore((state) => state.deviceId);
   console.log("accessToken:", accessToken);
 
-  const handlePlayTrack = (uri: string) => {
-    console.log("🎵 Clicked track URI from ArtistId:", uri);
-    setTrack(uri); // Uppdatera Zustand-store
+  const handlePlayTrack = async (uri: string) => {
+    setTrack(uri); // Keep track of which song is selected
+    await axios.put(
+      `https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`,
+      {
+        uris: [uri],
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    togglePlay(true);
   };
 
   useEffect(() => {

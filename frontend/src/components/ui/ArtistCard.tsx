@@ -1,5 +1,5 @@
 import { FC } from "react";
-import PlayerComponent from "../PlayerComponent";
+// import PlayerComponent from "../Player/PlayerComponent";
 import {
   Card,
   CardContent,
@@ -52,7 +52,6 @@ const ArtistCard: FC<Props> = ({ artist, handlePlayTrack }) => {
                 onClick={() => {
                   console.log("play");
                   handlePlayTrack(track.uri);
-                  console.log(isPlaying);
                   togglePlay(true);
                   console.log(isPlaying);
                 }}
@@ -84,7 +83,7 @@ const ArtistCard: FC<Props> = ({ artist, handlePlayTrack }) => {
           </article>
         </CardContent>
       </Card>
-      <PlayerComponent />
+      {/* <PlayerComponent /> */}
     </section>
   );
 };

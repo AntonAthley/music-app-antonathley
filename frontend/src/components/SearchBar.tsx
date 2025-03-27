@@ -83,14 +83,14 @@ export default function SearchBar() {
 
       {searchTerm && (
         <div className="p-2 flex align-middle justify-center flex-col md:flex-row lg:flex-row">
-          <div className="rounded-md border-4 border-black bg-colors-customYellow m-4 p-4 sm:w-full md:w-1/2 lg:w-1/3 h-[100%] overflow-y-auto">
+          <div className="rounded-md border-4 border-black bg-colors-customYellow m-3 p-4 sm:w-[calc(100%-17px)] md:w-1/2 lg:w-1/3 overflow-y-auto">
             <h2 className="text-4xl font-bold mb-4 bg-colors-customYellow">
               Search Results: Artists
             </h2>
             <ArtistList artists={formattedArtists} />
           </div>
 
-          <div className="rounded-md border-4 border-black bg-colors-customGreen m-4 p-4 sm:w-full md:w-1/2 lg:w-1/3 h-[100%] overflow-y-auto">
+          <div className="rounded-md border-4 border-black bg-colors-customGreen m-3 p-4 sm:w-[calc(100%-17px)] md:w-1/2 lg:w-1/3 overflow-y-auto">
             <h2 className="text-4xl font-bold mb-4 bg-colors-customGreen">
               Search Results: Songs
             </h2>
